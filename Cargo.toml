@@ -1,0 +1,33 @@
+[package]
+name = "ant-mania-challenge"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+name = "ant_mania"
+path = "src/lib.rs"
+
+[[bin]]
+name = "ant_mania_challenge"
+path = "src/main.rs"
+
+[dependencies]
+rand = "0.9.0"
+rayon = "1.10.0"
+clap = { version = "4.5.36", features = ["derive"] }
+
+[dev-dependencies]
+tempfile = "3.3"
+criterion = "0.5.1"
+
+[[bench]]
+name = 'benchmark_simulation'
+harness = false
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+debug = true
+strip = true
+panic = "abort"
