@@ -38,29 +38,29 @@ Varlarbos west=Cosma
 
 Simple run:
 
-`sh
+```sh
 cargo run -- --map hiveum_map_small.txt --ants 100
-`
+```
 
 Seed provided:
 
-`sh
+```sh
 cargo run -- --map hiveum_map_small.txt --ants 100 --seed 420
-`
+```
 
 ## Tests and benchmarks:
 
 Run tests:
 
-`sh
+```sh
 cargo test
-`
+```
 
 Run benches:
 
-`sh
+```sh
 cargo bench
-`
+```
 
 ### Benchmark results
 
